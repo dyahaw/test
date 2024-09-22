@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BIGBOX Event Management</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/BIGBOX_logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/backend-plugin.min.css">
+    <link rel="stylesheet" href="../assets/css/backend.css?v=1.0.0">
+    <link rel="stylesheet" href="../assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../assets/vendor/remixicon/fonts/remixicon.css">
+
+    <link rel="stylesheet" href="../assets/vendor/tui-calendar/tui-calendar/dist/tui-calendar.css">
+    <link rel="stylesheet" href="../assets/vendor/tui-calendar/tui-date-picker/dist/tui-date-picker.css">
+    <link rel="stylesheet" href="../assets/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css">
+</head>
+
+<body class="  ">
+    <!-- loader Start -->
+    <div id="loading">
+        <div id="loading-center">
+        </div>
+    </div>
+    <!-- loader END -->
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+
+        <div class="iq-sidebar  sidebar-default ">
+            <div class="iq-sidebar-logo d-flex align-items-center">
+                <a href="../backend/dashboard-superadmin.html" class="header-logo">
+                    <img src="../assets/images/BIGBOX_logo.png" alt="logo">
+                    <h3 class="logo-title light-logo">BIGBOX</h3>
+                </a>
+                <div class="iq-menu-bt-sidebar ml-0">
+                    <i class="las la-bars wrapper-menu"></i>
+                </div>
+            </div>
+            <div class="data-scrollbar" data-scroll="1">
+                <nav class="iq-sidebar-menu">
+                    <ul id="iq-sidebar-toggle" class="iq-menu">
+                        <li class="">
+                            <a href="../backend/dashboard-superadmin.html" class="svg-icon">
+                                <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                                <span class="ml-4">Dashboards</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="../app/usermanagement-superadmin.html" class="svg-icon">
+                                <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 12c2.5 0 4.5-2 4.5-4.5S14.5 3 12 3 7.5 5 7.5 7.5 9.5 12 12 12z"></path>
+                                    <path d="M12 14c-4.5 0-9 2-9 6v2h18v-2c0-4-4.5-6-9-6z"></path>
+                                </svg>
+                                <span class="ml-4">User Management</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="../app/activitylogs-superadmin.html" class="svg-icon">
+                                <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 12l2 2 4-4M21 12l-2-2-4 4"></path>
+                                    <path d="M3 6h18"></path>
+                                    <path d="M3 18h18"></path>
+                                </svg>
+                                <span class="ml-4">Activity Logs</span>
+                            </a>
+                        </li>
+            </div>
+        </div>
+        <div class="iq-top-navbar">
+            <div class="iq-navbar-custom">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
+                        <i class="ri-menu-line wrapper-menu"></i>
+                        <a href="../backend/dashboard-superadmin.html" class="header-logo">
+                            <h4 class="logo-title text-uppercase">BIGBOX</h4>
+                        </a>
+                    </div>
+                    <div class="navbar-breadcrumb">
+                        <h5>Dashboard Super Admin</h5>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-label="Toggle navigation">
+                            <i class="ri-menu-3-line"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto navbar-list align-items-center">
+                                <li class="nav-item nav-icon nav-item-icon dropdown">
+                                    <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+                                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                        </svg>
+                                        <span class="bg-primary "></span>
+                                    </a>
+                                    <div class="iq-sub-dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <div class="card shadow-none m-0">
+                                            <div class="card-body p-0 ">
+                                                <div class="cust-title p-3">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <h5 class="mb-0">Notifications</h5>
+                                                        <a class="badge badge-primary badge-card" href="#">3</a>
+                                                    </div>
+                                                </div>
+                                                <div class="px-3 pt-0 pb-0 sub-card">
+                                                    <a href="#" class="iq-sub-card">
+                                                        <div
+                                                            class="media align-items-center cust-card py-3 border-bottom">
+                                                            <div class="">
+                                                                <img class="avatar-50 rounded-small"
+                                                                    src="../assets/images/user/01.jpg" alt="01">
+                                                            </div>
+                                                            <div class="media-body ml-3">
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-between">
+                                                                    <h6 class="mb-0">Emma Watson</h6>
+                                                                    <small class="text-dark"><b>12 : 47 pm</b></small>
+                                                                </div>
+                                                                <small class="mb-0">Lorem ipsum dolor sit amet</small>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="iq-sub-card">
+                                                        <div
+                                                            class="media align-items-center cust-card py-3 border-bottom">
+                                                            <div class="">
+                                                                <img class="avatar-50 rounded-small"
+                                                                    src="../assets/images/user/02.jpg" alt="02">
+                                                            </div>
+                                                            <div class="media-body ml-3">
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-between">
+                                                                    <h6 class="mb-0">Ashlynn Franci</h6>
+                                                                    <small class="text-dark"><b>11 : 30 pm</b></small>
+                                                                </div>
+                                                                <small class="mb-0">Lorem ipsum dolor sit amet</small>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="iq-sub-card">
+                                                        <div class="media align-items-center cust-card py-3">
+                                                            <div class="">
+                                                                <img class="avatar-50 rounded-small"
+                                                                    src="../assets/images/user/03.jpg" alt="03">
+                                                            </div>
+                                                            <div class="media-body ml-3">
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-between">
+                                                                    <h6 class="mb-0">Kianna Carder</h6>
+                                                                    <small class="text-dark"><b>11 : 21 pm</b></small>
+                                                                </div>
+                                                                <small class="mb-0">Lorem ipsum dolor sit amet</small>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <a class="right-ic btn btn-primary btn-block position-relative p-2"
+                                                    href="#" role="button">
+                                                    View All
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item nav-icon dropdown caption-content">
+                                    <a href="#" class="search-toggle dropdown-toggle  d-flex align-items-center"
+                                        id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <img src="../assets/images/user/1.jpg" class="img-fluid rounded-circle"
+                                            alt="user">
+                                        <div class="caption ml-3">
+                                            <h6 class="mb-0 line-height">Dyah<i class="las la-angle-down ml-2"></i></h6>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right border-none"
+                                        aria-labelledby="dropdownMenuButton">
+                                        <li class="dropdown-item d-flex svg-icon">
+                                            <svg class="svg-icon mr-0 text-primary" id="h-02-p" width="20"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                            </svg>
+                                            <a href="../app/user-profile-edit-superadmin.html">Edit Profile</a>
+                                        </li>
+                                        <li class="dropdown-item d-flex svg-icon">
+                                            <svg class="svg-icon mr-0 text-primary" id="h-03-p" width="20"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            </svg>
+                                            <a href="../app/user-account-setting-superadmin.html">Account Settings</a>
+                                        </li>
+                                        <li class="dropdown-item  d-flex svg-icon border-top">
+                                            <svg class="svg-icon mr-0 text-primary" id="h-05-p" width="20"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                            </svg>
+                                            <a href="../backend/auth-sign-up.html">Logout</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="content-page">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between">
+                                <div class="header-title">
+                                    <h4 class="card-title">User Management</h4>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <div class="row justify-content-between">
+                                        <div class="col-sm-6 col-md-6">
+                                            <div id="user_list_datatable_info" class="dataTables_filter">
+                                                <form class="mr-3 position-relative">
+                                                    <div class="form-group mb-0">
+                                                        <input type="search" class="form-control"
+                                                            id="exampleInputSearch" placeholder="Search"
+                                                            aria-controls="user-list-table">
+                                                    </div>
+                                                </form>
+                                                <a href="buatakun-superadmin.html" class="btn bg-primary mt-2">
+                                                    <i class="ri-add-line"></i> Create Account
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6">
+                                            <div class="user-list-files d-flex">
+                                                <a class="bg-primary" href="javascript:void();">Print</a>
+                                                <a class="bg-primary" href="javascript:void();">Excel</a>
+                                                <a class="bg-primary" href="javascript:void();">Pdf</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table id="user-list-table" class="table table-striped dataTable mt-4" role="grid"
+                                        aria-describedby="user-list-page-info">
+                                        <thead>
+                                            <tr class="ligth">
+                                                <th>ID</th>
+                                                <th>Profile</th>
+                                                <th>Name</th>
+                                                <th>Contact</th>
+                                                <th>Email</th>
+                                                <th>Role</th>
+                                                <th>Status</th>
+                                                <th>Join Date</th>
+                                                <th style="min-width: 100px">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td> <!-- ID diisi otomatis -->
+                                                <td class="text-center"><img class="rounded img-fluid avatar-40"
+                                                        src="../assets/images/user/01.jpg" alt="profile"></td>
+                                                <td>Anna Sthesia</td>
+                                                <td>(760) 756 7568</td>
+                                                <td>annasthesia@gmail.com</td>
+                                                <td>Super Admin</td>
+                                                <td><span class="badge bg-primary">Active</span></td>
+                                                <td>2019/12/01</td>
+                                                <td>
+                                                    <div class="flex align-items-center list-user-action">
+                                                        <button class="btn btn-sm bg-primary edit-btn" data-id="">
+                                                            <i class="ri-pencil-line"></i>
+                                                        </button>
+                                                        <button class="btn btn-sm bg-danger delete-btn" data-id="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td> <!-- ID diisi otomatis -->
+                                                <td class="text-center"><img class="rounded img-fluid avatar-40"
+                                                        src="../assets/images/user/02.jpg" alt="profile"></td>
+                                                <td>Brock Lee</td>
+                                                <td>+62 5689 458 658</td>
+                                                <td>brocklee@gmail.com</td>
+                                                <td>Super Admin</td>
+                                                <td><span class="badge bg-primary">Active</span></td>
+                                                <td>2019/12/01</td>
+                                                <td>
+                                                    <div class="flex align-items-center list-user-action">
+                                                        <button class="btn btn-sm bg-primary edit-btn" data-id="">
+                                                            <i class="ri-pencil-line"></i>
+                                                        </button>
+                                                        <button class="btn btn-sm bg-danger delete-btn" data-id="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td> <!-- ID diisi otomatis -->
+                                                <td class="text-center"><img class="rounded img-fluid avatar-40"
+                                                        src="../assets/images/user/03.jpg" alt="profile"></td>
+                                                <td>Dan Druff</td>
+                                                <td>+55 6523 456 856</td>
+                                                <td>dandruff@gmail.com</td>
+                                                <td>Admin</td>
+                                                <td><span class="badge bg-danger-light">Inactive</span></td>
+                                                <td>2019/12/01</td>
+                                                <td>
+                                                    <div class="flex align-items-center list-user-action">
+                                                        <button class="btn btn-sm bg-primary edit-btn" data-id="">
+                                                            <i class="ri-pencil-line"></i>
+                                                        </button>
+                                                        <button class="btn btn-sm bg-danger delete-btn" data-id="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td> <!-- ID diisi otomatis -->
+                                                <td class="text-center"><img class="rounded img-fluid avatar-40"
+                                                        src="../assets/images/user/04.jpg" alt="profile"></td>
+                                                <td>Hans Olo</td>
+                                                <td>+91 2586 253 125</td>
+                                                <td>hansolo@gmail.com</td>
+                                                <td>Admin</td>
+                                                <td><span class="badge bg-danger-light">Inactive</span></td>
+                                                <td>2019/12/01</td>
+                                                <td>
+                                                    <div class="flex align-items-center list-user-action">
+                                                        <button class="btn btn-sm bg-primary edit-btn" data-id="">
+                                                            <i class="ri-pencil-line"></i>
+                                                        </button>
+                                                        <button class="btn btn-sm bg-danger delete-btn" data-id="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td> <!-- ID diisi otomatis -->
+                                                <td class="text-center"><img class="rounded img-fluid avatar-40"
+                                                        src="../assets/images/user/05.jpg" alt="profile"></td>
+                                                <td>Lynn Guini</td>
+                                                <td>+27 2563 456 589</td>
+                                                <td>lynnguini@gmail.com</td>
+                                                <td>CRM</td>
+                                                <td><span class="badge bg-primary">Active</span></td>
+                                                <td>2019/12/01</td>
+                                                <td>
+                                                    <div class="flex align-items-center list-user-action">
+                                                        <button class="btn btn-sm bg-primary edit-btn" data-id="">
+                                                            <i class="ri-pencil-line"></i>
+                                                        </button>
+                                                        <button class="btn btn-sm bg-danger delete-btn" data-id="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td> <!-- ID diisi otomatis -->
+                                                <td class="text-center"><img class="rounded img-fluid avatar-40"
+                                                        src="../assets/images/user/06.jpg" alt="profile"></td>
+                                                <td>Eric Shun</td>
+                                                <td>+55 25685 256 589</td>
+                                                <td>ericshun@gmail.com</td>
+                                                <td>CRM</td>
+                                                <td><span class="badge bg-danger-light">Inactive</span></td>
+                                                <td>2019/12/01</td>
+                                                <td>
+                                                    <div class="flex align-items-center list-user-action">
+                                                        <button class="btn btn-sm bg-primary edit-btn" data-id="">
+                                                            <i class="ri-pencil-line"></i>
+                                                        </button>
+                                                        <button class="btn btn-sm bg-danger delete-btn" data-id="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td> <!-- ID diisi otomatis -->
+                                                <td class="text-center"><img class="rounded img-fluid avatar-40"
+                                                        src="../assets/images/user/07.jpg" alt="profile"></td>
+                                                <td>aaronottix</td>
+                                                <td>(760) 765 2658</td>
+                                                <td>budwiser@ymail.com</td>
+                                                <td>Super Admin</td>
+                                                <td><span class="badge bg-primary">Active</span></td>
+                                                <td>2019/12/01</td>
+                                                <td>
+                                                    <div class="flex align-items-center list-user-action">
+                                                        <button class="btn btn-sm bg-primary edit-btn" data-id="">
+                                                            <i class="ri-pencil-line"></i>
+                                                        </button>
+                                                        <button class="btn btn-sm bg-danger delete-btn" data-id="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td> <!-- ID diisi otomatis -->
+                                                <td class="text-center"><img class="rounded img-fluid avatar-40"
+                                                        src="../assets/images/user/08.jpg" alt="profile"></td>
+                                                <td>Marge Arita</td>
+                                                <td>+27 5625 456 589</td>
+                                                <td>margearita@gmail.com</td>
+                                                <td>Super Admin</td>
+                                                <td><span class="badge bg-primary">Active</span></td>
+                                                <td>2019/12/01</td>
+                                                <td>
+                                                    <div class="flex align-items-center list-user-action">
+                                                        <button class="btn btn-sm bg-primary edit-btn" data-id="">
+                                                            <i class="ri-pencil-line"></i>
+                                                        </button>
+                                                        <button class="btn btn-sm bg-danger delete-btn" data-id="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td> <!-- ID diisi otomatis -->
+                                                <td class="text-center"><img class="rounded img-fluid avatar-40"
+                                                        src="../assets/images/user/09.jpg" alt="profile"></td>
+                                                <td>Bill Dabear</td>
+                                                <td>+55 2563 456 589</td>
+                                                <td>billdabear@gmail.com</td>
+                                                <td>Super Admin</td>
+                                                <td><span class="badge bg-primary">Active</span></td>
+                                                <td>2019/12/01</td>
+                                                <td>
+                                                    <div class="flex align-items-center list-user-action">
+                                                        <button class="btn btn-sm bg-primary edit-btn" data-id="">
+                                                            <i class="ri-pencil-line"></i>
+                                                        </button>
+                                                        <button class="btn btn-sm bg-danger delete-btn" data-id="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row justify-content-between mt-3">
+                                    <div id="user-list-page-info" class="col-md-6">
+                                        <span>Showing 1 to 5 of 5 entries</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination justify-content-end mb-0">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1"
+                                                        aria-disabled="true">Previous</a>
+                                                </li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">Next</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Wrapper End-->
+    <footer class="iq-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                </div>
+                <div class="col-lg-6 text-right">
+                    <span class="mr-1">
+                        <script>document.write(new Date().getFullYear())</script>©
+                    </span> <a href="#" class="">BIGBOX EVENT MANAGEMENT TEAM 49</a>.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Backend Bundle JavaScript -->
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tableBody = document.querySelector('#user-list-table tbody');
+            const rows = tableBody.querySelectorAll('tr');
+
+            rows.forEach((row, index) => {
+                const idCell = row.querySelector('td:first-child'); // Mengambil sel pertama (ID)
+                idCell.textContent = String(index + 1).padStart(5, '0'); // Mengisi ID dengan format 00001, 00002, dll.
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('exampleInputSearch');
+            const tableBody = document.querySelector('#user-list-table tbody');
+
+            searchInput.addEventListener('input', function () {
+                const searchValue = searchInput.value.toLowerCase();
+                const rows = tableBody.querySelectorAll('tr');
+
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    let rowText = '';
+
+                    // Gabungkan teks dari semua sel dalam baris
+                    cells.forEach(cell => {
+                        rowText += cell.textContent.toLowerCase() + ' ';
+                    });
+
+                    // Sembunyikan atau tampilkan baris berdasarkan kecocokan
+                    if (rowText.includes(searchValue)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tableBody = document.querySelector('#user-list-table tbody');
+            const rows = tableBody.querySelectorAll('tr');
+
+            rows.forEach((row, index) => {
+                const idCell = row.querySelector('td:first-child'); // Mengambil sel pertama (ID)
+                const formattedId = String(index + 1).padStart(5, '0'); // Format ID menjadi 00001, 00002, dll.
+                idCell.textContent = formattedId; // Mengisi ID
+
+                // Mengatur data-id untuk tombol Edit dan Delete
+                const editBtn = row.querySelector('.edit-btn');
+                const deleteBtn = row.querySelector('.delete-btn');
+                editBtn.dataset.id = formattedId;
+                deleteBtn.dataset.id = formattedId;
+            });
+
+            // Search Functionality
+            const searchInput = document.getElementById('exampleInputSearch');
+
+            searchInput.addEventListener('input', function () {
+                const searchValue = searchInput.value.toLowerCase();
+                const rows = tableBody.querySelectorAll('tr');
+
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    let rowText = '';
+
+                    cells.forEach(cell => {
+                        rowText += cell.textContent.toLowerCase() + ' ';
+                    });
+
+                    if (rowText.includes(searchValue)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+
+            // Event listener untuk tombol Edit
+            tableBody.addEventListener('click', function (event) {
+                if (event.target.closest('.edit-btn')) {
+                    const userId = event.target.closest('.edit-btn').dataset.id;
+                    editUser(userId);
+                }
+            });
+
+            // Event listener untuk tombol Delete
+            tableBody.addEventListener('click', function (event) {
+                if (event.target.closest('.delete-btn')) {
+                    const userId = event.target.closest('.delete-btn').dataset.id;
+                    deleteUser(userId);
+                }
+            });
+
+            function editUser(id) {
+                alert('Edit user dengan ID: ' + id);
+                // Logika untuk mengedit bisa ditambahkan di sini
+            }
+
+            function deleteUser(id) {
+                if (confirm('Anda yakin ingin menghapus user dengan ID: ' + id + '?')) {
+                    const row = tableBody.querySelector(`tr td:contains('${id}')`).parentElement;
+                    if (row) {
+                        row.remove();
+                    }
+                    alert('User dengan ID: ' + id + ' telah dihapus.');
+                }
+            }
+        });
+    </script>
+
+    <script src="../assets/js/backend-bundle.min.js"></script>
+
+    <!-- Table Treeview JavaScript -->
+    <script src="../assets/js/table-treeview.js"></script>
+
+    <!-- Chart Custom JavaScript -->
+    <script src="../assets/js/customizer.js"></script>
+
+    <!-- Chart Custom JavaScript -->
+    <script async src="../assets/js/chart-custom.js"></script>
+    <!-- Chart Custom JavaScript -->
+    <script async src="../assets/js/slider.js"></script>
+
+    <!-- app JavaScript -->
+    <script src="../assets/js/app.js"></script>
+
+    <script src="../assets/vendor/moment.min.js"></script>
+</body>
+
+</html>
