@@ -7,16 +7,16 @@
     <title>BIGBOX Event Management</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/images/BIGBOX_logo.png" />
+    <link rel="shortcut icon" href="html/assets/images/BIGBOX_logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/backend-plugin.min.css">
-    <link rel="stylesheet" href="../assets/css/backend.css?v=1.0.0">
-    <link rel="stylesheet" href="../assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
-    <link rel="stylesheet" href="../assets/vendor/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="html/assets/css/backend-plugin.min.css">
+    <link rel="stylesheet" href="html/assets/css/backend.css?v=1.0.0">
+    <link rel="stylesheet" href="html/assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="html/assets/vendor/remixicon/fonts/remixicon.css">
 
-    <link rel="stylesheet" href="../assets/vendor/tui-calendar/tui-calendar/dist/tui-calendar.css">
-    <link rel="stylesheet" href="../assets/vendor/tui-calendar/tui-date-picker/dist/tui-date-picker.css">
-    <link rel="stylesheet" href="../assets/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css">
+    <link rel="stylesheet" href="html/assets/vendor/tui-calendar/tui-calendar/dist/tui-calendar.css">
+    <link rel="stylesheet" href="html/assets/vendor/tui-calendar/tui-date-picker/dist/tui-date-picker.css">
+    <link rel="stylesheet" href="html/assets/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css">
 </head>
 
 <body class="  ">
@@ -31,8 +31,8 @@
 
         <div class="iq-sidebar  sidebar-default ">
             <div class="iq-sidebar-logo d-flex align-items-center">
-                <a href="../backend/dashboard-superadmin.html" class="header-logo">
-                    <img src="../assets/images/BIGBOX_logo.png" alt="logo">
+                <a href="dashboard-admin.html" class="header-logo">
+                    <img src="html/assets/images/BIGBOX_logo.png" alt="logo">
                     <h3 class="logo-title light-logo">BIGBOX</h3>
                 </a>
                 <div class="iq-menu-bt-sidebar ml-0">
@@ -43,7 +43,7 @@
                 <nav class="iq-sidebar-menu">
                     <ul id="iq-sidebar-toggle" class="iq-menu">
                         <li class="">
-                            <a href="../backend/dashboard-superadmin.html" class="svg-icon">
+                            <a href="dashboard-admin.html" class="svg-icon">
                                 <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
@@ -54,26 +54,35 @@
                             </a>
                         </li>
                         <li class="">
-                            <a href="../app/usermanagement-superadmin.html" class="svg-icon">
-                                <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 12c2.5 0 4.5-2 4.5-4.5S14.5 3 12 3 7.5 5 7.5 7.5 9.5 12 12 12z"></path>
-                                    <path d="M12 14c-4.5 0-9 2-9 6v2h18v-2c0-4-4.5-6-9-6z"></path>
-                                </svg>
-                                <span class="ml-4">User Management</span>
+                            <a href="enm-admin.html" class="svg-icon">
+                                <i class="fas fa-calendar-alt" style="font-size: 25px;"></i>
+                                <span class="ml-4">Event & Management</span>
                             </a>
                         </li>
-                        <li class="active">
-                            <a href="../app/activitylogs-superadmin.html" class="svg-icon">
+                        <li class="">
+                            <a href="page-task-admin.html" class="svg-icon">
                                 <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 12l2 2 4-4M21 12l-2-2-4 4"></path>
-                                    <path d="M3 6h18"></path>
-                                    <path d="M3 18h18"></path>
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2">
+                                    </path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
                                 </svg>
-                                <span class="ml-4">Activity Logs</span>
+                                <span class="ml-4">Task</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="page-desk-admin.html" class="svg-icon">
+                                <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                    </path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                                <span class="ml-4">Desk</span>
                             </a>
                         </li>
             </div>
@@ -83,13 +92,13 @@
                 <nav class="navbar navbar-expand-lg navbar-light p-0">
                     <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
                         <i class="ri-menu-line wrapper-menu"></i>
-                        <a href="../backend/dashboard-superadmin.html" class="header-logo">
+                        <a href="dashboard-admin.html" class="header-logo">
                             <h4 class="logo-title text-uppercase">BIGBOX</h4>
 
                         </a>
                     </div>
                     <div class="navbar-breadcrumb">
-                        <h5>Dashboard Super Admin</h5>
+                        <h5>Dashboard Admin</h5>
                     </div>
                     <div class="d-flex align-items-center">
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -125,7 +134,7 @@
                                                             class="media align-items-center cust-card py-3 border-bottom">
                                                             <div class="">
                                                                 <img class="avatar-50 rounded-small"
-                                                                    src="../assets/images/user/01.jpg" alt="01">
+                                                                    src="html/assets/images/user/01.jpg" alt="01">
                                                             </div>
                                                             <div class="media-body ml-3">
                                                                 <div
@@ -142,7 +151,7 @@
                                                             class="media align-items-center cust-card py-3 border-bottom">
                                                             <div class="">
                                                                 <img class="avatar-50 rounded-small"
-                                                                    src="../assets/images/user/02.jpg" alt="02">
+                                                                    src="html/assets/images/user/02.jpg" alt="02">
                                                             </div>
                                                             <div class="media-body ml-3">
                                                                 <div
@@ -158,7 +167,7 @@
                                                         <div class="media align-items-center cust-card py-3">
                                                             <div class="">
                                                                 <img class="avatar-50 rounded-small"
-                                                                    src="../assets/images/user/03.jpg" alt="03">
+                                                                    src="html/assets/images/user/03.jpg" alt="03">
                                                             </div>
                                                             <div class="media-body ml-3">
                                                                 <div
@@ -183,7 +192,7 @@
                                     <a href="#" class="search-toggle dropdown-toggle  d-flex align-items-center"
                                         id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
-                                        <img src="../assets/images/user/1.jpg" class="img-fluid rounded-circle"
+                                        <img src="html/assets/images/user/1.jpg" class="img-fluid rounded-circle"
                                             alt="user">
                                         <div class="caption ml-3">
                                             <h6 class="mb-0 line-height">Dyah<i class="las la-angle-down ml-2"></i></h6>
@@ -198,7 +207,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                             </svg>
-                                            <a href="../app/user-profile-edit-superadmin.html">Edit Profile</a>
+                                            <a href="user-profile-edit-admin.html">Edit Profile</a>
                                         </li>
                                         <li class="dropdown-item d-flex svg-icon">
                                             <svg class="svg-icon mr-0 text-primary" id="h-03-p" width="20"
@@ -209,7 +218,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                             </svg>
-                                            <a href="../app/user-account-setting-superadmin.html">Account Settings</a>
+                                            <a href="user-account-setting-admin.html">Account Settings</a>
                                         </li>
                                         <li class="dropdown-item  d-flex svg-icon border-top">
                                             <svg class="svg-icon mr-0 text-primary" id="h-05-p" width="20"
@@ -218,7 +227,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                                             </svg>
-                                            <a href="../backend/auth-sign-up.html">Logout</a>
+                                            <a href="index.html">Logout</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -278,7 +287,7 @@
                                                         <div class="profile-img-edit">
                                                             <div class="crm-profile-img-edit">
                                                                 <img class="crm-profile-pic rounded-circle avatar-100"
-                                                                    src="../assets/images/user/11.png"
+                                                                    src="html/assets/images/user/11.png"
                                                                     alt="profile-pic">
                                                                 <div class="crm-p-image bg-primary">
                                                                     <i class="las la-pen upload-button"></i>
@@ -537,23 +546,23 @@
         </div>
     </footer>
     <!-- Backend Bundle JavaScript -->
-    <script src="../assets/js/backend-bundle.min.js"></script>
+    <script src="html/assets/js/backend-bundle.min.js"></script>
 
     <!-- Table Treeview JavaScript -->
-    <script src="../assets/js/table-treeview.js"></script>
+    <script src="html/assets/js/table-treeview.js"></script>
 
     <!-- Chart Custom JavaScript -->
-    <script src="../assets/js/customizer.js"></script>
+    <script src="html/assets/js/customizer.js"></script>
 
     <!-- Chart Custom JavaScript -->
-    <script async src="../assets/js/chart-custom.js"></script>
+    <script async src="html/assets/js/chart-custom.js"></script>
     <!-- Chart Custom JavaScript -->
-    <script async src="../assets/js/slider.js"></script>
+    <script async src="html/assets/js/slider.js"></script>
 
     <!-- app JavaScript -->
-    <script src="../assets/js/app.js"></script>
+    <script src="html/assets/js/app.js"></script>
 
-    <script src="../assets/vendor/moment.min.js"></script>
+    <script src="html/assets/vendor/moment.min.js"></script>
 </body>
 
 </html>
